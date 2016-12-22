@@ -1,6 +1,6 @@
-var React = require('react');
+const React = require('react');
 
-var Timer = React.createClass({
+let Timer = React.createClass({
   render: function () {
     return <p>Timer.jsx</p>;
   }

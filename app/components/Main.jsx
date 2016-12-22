@@ -1,7 +1,7 @@
-var React = require('react');
-var Navigation = require('Navigation');
+const React = require('react');
+let Navigation = require('Navigation');
 
-var Main = (props) => {
+let Main = (props) => {
   return (
     <div>
       <Navigation/>

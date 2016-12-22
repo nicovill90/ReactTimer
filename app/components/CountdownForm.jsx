@@ -1,9 +1,9 @@
 const React = require('react');
 
-var CountdownForm = React.createClass({
+let CountdownForm = React.createClass({
   onSubmit: function (e) {
     e.preventDefault();
-    var strSeconds = this.refs.seconds.value;
+    let strSeconds = this.refs.seconds.value;
 
     if (strSeconds.length > 0 && strSeconds.match(/^[0-9]*$/)) {
       this.refs.seconds.value = '';

@@ -1,7 +1,7 @@
-var React = require('react');
-var {Link, IndexLink} = require('react-router');
+const React = require('react');
+const {Link, IndexLink} = require('react-router');
 
-var Navigation = () => {
+let Navigation = () => {
   return (
     <div className="top-bar">
       <div className="top-bar-left">

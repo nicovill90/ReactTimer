@@ -4,7 +4,7 @@ const ReactDOM = require('react-dom');
 const TestUtils = require('react-addons-test-utils');
 const $ = require('jquery');
 
-var CountdownForm = require('CountdownForm');
+let CountdownForm = require('CountdownForm');
 
 describe('CountdownForm', () => {
   it('should exists', () => {
@@ -12,9 +12,9 @@ describe('CountdownForm', () => {
   });
 
   it('should call onSetCountDown if valid seconds entered', () => {
-    var spy = expect.createSpy();
-    var countdownForm = TestUtils.renderIntoDocument(<CountdownForm onSetCountDown={spy}/>);
-    var $el = $(ReactDOM.findDOMNode(countdownForm));
+    let spy = expect.createSpy();
+    let countdownForm = TestUtils.renderIntoDocument(<CountdownForm onSetCountDown={spy}/>);
+    let $el = $(ReactDOM.findDOMNode(countdownForm));
 
     countdownForm.refs.seconds.value = '109';
     TestUtils.Simulate.submit($el.find('form')[0]);
@@ -23,9 +23,9 @@ describe('CountdownForm', () => {
   });
 
   it('should not call onSetCountDown if invalid seconds entered', () => {
-    var spy = expect.createSpy();
-    var countdownForm = TestUtils.renderIntoDocument(<CountdownForm onSetCountDown={spy}/>);
-    var $el = $(ReactDOM.findDOMNode(countdownForm));
+    let spy = expect.createSpy();
+    let countdownForm = TestUtils.renderIntoDocument(<CountdownForm onSetCountDown={spy}/>);
+    let $el = $(ReactDOM.findDOMNode(countdownForm));
 
     countdownForm.refs.seconds.value = 'abc';
     TestUtils.Simulate.submit($el.find('form')[0]);
@@ -34,9 +34,9 @@ describe('CountdownForm', () => {
   });
 
   it('should not call onSetCountDown if no seconds entered', () => {
-    var spy = expect.createSpy();
-    var countdownForm = TestUtils.renderIntoDocument(<CountdownForm onSetCountDown={spy}/>);
-    var $el = $(ReactDOM.findDOMNode(countdownForm));
+    let spy = expect.createSpy();
+    let countdownForm = TestUtils.renderIntoDocument(<CountdownForm onSetCountDown={spy}/>);
+    let $el = $(ReactDOM.findDOMNode(countdownForm));
 
     countdownForm.refs.seconds.value = '';
     TestUtils.Simulate.submit($el.find('form')[0]);
